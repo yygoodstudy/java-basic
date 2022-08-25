@@ -23,31 +23,20 @@ public class LambdaExercise01 {
 
     public static void main(String[] args) {
         List<Employee> employeeList = sortEmployees(LambdaExercise01.employeeList, (e1, e2) -> {
-            int len1 = e1.getName().length(), len2 = e2.getName().length();
-
-            if (e1.getAge() > e2.getAge()) {
-                return 1;
-            } else if (e1.getAge() == e2.getAge()) {
-                if (len1 > len2) {
-                    return 1;
-                } else if (len1 == len2) {
-                    return 0;
-                } else {
-                    return -1;
-                }
+            if (e1.getAge() == e2.getAge()) {
+                return e1.getName().compareTo(e2.getName());
             } else {
-                return -1;
+                return Integer.compare(e1.getAge(), e2.getAge());
             }
         });
         employeeList.forEach(System.out::println);
     }
 
     // 调用Collections.sort()方法，通过定制排序比较两个emp
-    //
-    //
-    // loyee(先按年龄比，年龄相同再按姓名比),使用Lambda表达式作为参数
+    // employee(先按年龄比，年龄相同再按姓名比),使用Lambda表达式作为参数
     private static List<Employee> sortEmployees(List<Employee> employees, Comparator<Employee> comparator) {
         Collections.sort(employees, comparator);
         return employees;
     }
+
 }

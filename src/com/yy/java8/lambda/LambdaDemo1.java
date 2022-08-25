@@ -2,7 +2,7 @@ package com.yy.java8.lambda;
 
 /**
  * @Description TODO
- * @Date 2022/8/22 11:50
+ * @Date 2022/8/22 19:50
  */
 public class LambdaDemo1 {
 

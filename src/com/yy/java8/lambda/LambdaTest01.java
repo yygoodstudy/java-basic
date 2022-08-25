@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 /**
  * @Description 测试lambda表达式1
- * @Date 2022/8/22 16:19
+ * @Date 2022/8/22 18:19
  */
 public class LambdaTest01 {
     static List<Employee> employeeList = new ArrayList<>();

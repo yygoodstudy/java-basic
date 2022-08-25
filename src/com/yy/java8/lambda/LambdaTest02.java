@@ -5,7 +5,7 @@ import java.util.function.Consumer;
 
 /**
  * @Description Lambda表达式基本语法
- * @Date 2022/8/22 17:59
+ * @Date 2022/8/22 19:59
  */
 public class LambdaTest02 {
 
